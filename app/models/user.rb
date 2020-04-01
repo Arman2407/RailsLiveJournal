@@ -4,6 +4,7 @@ class User < ApplicationRecord
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable,
+         :registerable, :confirmable,
          :omniauthable, :omniauth_providers => [:facebook]
 
          def to_s
